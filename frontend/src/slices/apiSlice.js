@@ -17,7 +17,7 @@ export const apiSlice = createApi({
 //since we are working with the backend API we are gonna have a rootAPI slice and the we will extend that
 //with the further slices, i.e. product API slices, Orders API slices, Users API slice, so for now we just have set up
 //the base API slice down, this slice is gonna be the parent to other API slices
-
+//fetchBaseQuery function helps us to send request to backend 
 
 // {createSlice function is used when we are not dealing with the asynchronous requests, eg cart state. etc,}
 // since we are dealing with the backend API we will use {createApi}, it works a bit differently

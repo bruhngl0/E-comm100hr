@@ -28,7 +28,7 @@ const ProductScreen = () => {
          Go Back
       </Link>   
  
-    {isLoading ? (<Loader />): error ? (<Loader />) : error ? (<Message variant= 'danger'>
+    {isLoading ? (<Loader />) : error ? (<Message variant= 'danger'>
         {error?.data?.message || error.error}
       </Message>) : (<Row>
         <Col md={5}>
