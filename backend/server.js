@@ -12,7 +12,13 @@ const port = process.env.PORT || 2121;
 
 
 connectDB() //connect to mongoDB
+
+
 const app = express()
+
+//body parser middleware
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
 
 
 app.get('/' , (req,res) => {
