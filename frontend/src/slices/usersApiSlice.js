@@ -35,3 +35,5 @@ export const usersApiSlice = apiSlice.injectEndpoints({
 
 //great work
 export const { useLoginMutation, useLogoutMutation, useRegisterMutation} = usersApiSlice
+
+//full stack apps are tough to build from scratch man my gf is trash
