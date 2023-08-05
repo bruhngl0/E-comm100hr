@@ -42,7 +42,27 @@ export const ordersApiSlice = apiSlice.injectEndpoints({
             }),
             keepUnusedDataFor: 5,
           }),
-    })
-})//TRTING
 
-export const { useCreateOrderMutation, useGetOrderDetailsQuery, useGetPayPalClientIdQuery, usePayOrderMutation, useGetMyOrdersQuery} = ordersApiSlice;
+        getOrders:  builder.query({
+            query: ()=> ({
+                url: ORDERS_URL,
+            }),
+            keepUnusedDataFor: 5,
+        }),
+         deliverOrder: builder.mutation({
+            query: (orderId) =>  ({
+                url: `${ORDERS_URL}/${orderId}/deliver`,
+                method: 'PUT',
+            })
+         })
+      }),
+})
+
+export const { 
+     useCreateOrderMutation,
+     useGetOrderDetailsQuery, 
+     useGetPayPalClientIdQuery, 
+     usePayOrderMutation, 
+     useGetMyOrdersQuery,
+     useGetOrdersQuery,
+     useDeliverOrderMutation,} = ordersApiSlice;
