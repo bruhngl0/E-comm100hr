@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Rating from '../components/Rating'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
+import Meta from '../components/Meta'
 import { useGetProductDetailsQuery, useCreateReviewMutation } from '../slices/productsApiSlice'
 import { addToCart } from '../slices/cartSlice'
 
@@ -68,6 +69,7 @@ const ProductScreen = () => {
       (
 
          <>
+         <Meta title={product.name} />
          <Row>
          <Col md={5}>
              <Image src={product.image} fluid />
