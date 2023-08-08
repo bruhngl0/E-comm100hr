@@ -29,10 +29,6 @@ app.use(express.urlencoded({extended: true}))
 app.use(cookieParser())
 
 
-app.get('/' , (req,res) => {
-    res.send("api running")
-})
-
 app.use('/api/products', productRoutes)
 app.use('/api/users', userRoutes)
 app.use('/api/orders', orderRoutes)
@@ -44,7 +40,7 @@ const __dirname = path.resolve()
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')))
 
 if (process.env.NODE_ENV === 'production') {
-    const __dirname = path.resolve();
+    
    
     app.use(express.static(path.join(__dirname, '/frontend/build')));
   
