@@ -40,7 +40,7 @@ const Header = () => {
             <LinkContainer to = '/'>
             <Navbar.Brand>
                 
-               TechVerse
+              ProShop
             </Navbar.Brand>
             </LinkContainer>
 
