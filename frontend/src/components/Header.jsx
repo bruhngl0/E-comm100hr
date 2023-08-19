@@ -39,8 +39,8 @@ const Header = () => {
 
             <LinkContainer to = '/'>
             <Navbar.Brand>
-                <img src={logo} alt='logo' />
-                ProShop
+                
+               TechVerse
             </Navbar.Brand>
             </LinkContainer>
 
